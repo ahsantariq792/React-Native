@@ -25,7 +25,7 @@ export default function App() {
     JosefinSans_100Thin,
     JosefinSans_200ExtraLight,
     light : JosefinSans_300Light,
-    regular: JosefinSans_400Regular,
+    regular: JosefinSans_400Regular,  //giving key value pair so we dont need to write full font family name every time
     medium: JosefinSans_500Medium,
     bold : JosefinSans_700Bold,
     JosefinSans_100Thin_Italic,
@@ -44,9 +44,11 @@ if (!fontsLoad) {
 
   return (
     <View style={styles.container}>
+      {/* can give multiples classes by using array */}
       <Text style={[styles.textStyle_1, styles.fontStyle]}>Welcome to React Native</Text>
       <Text style={[styles.textStyle_2, styles.fontStyle]}>Welcome to React Native</Text>
       <Text style={[styles.textStyle_3, styles.fontStyle]}>Welcome to React Native</Text>
+      {/* use custom inline styling */}
       <Text style={[styles.textStyle_4, styles.fontStyle, {color: "blue"}]}>Welcome to React Native</Text>
       <StatusBar style="auto" />
     </View>
